@@ -2,7 +2,7 @@ function getComputerChoice(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
 
 }
-const computerResponse = getComputerChoice(1,3); 
+const computerResponse = getComputerChoice(1,3); //Computer is selecting a random number 1-3 from the getComputerChoice formula above. The response is then converted to strings.
 console.log(computerResponse);
 let computerSelection;
         if (computerResponse === 1) {
@@ -13,7 +13,7 @@ let computerSelection;
 console.log(computerSelection);
 
 
-let userInput = prompt("Rock Paper Scissors!");
+let userInput = prompt("Rock Paper Scissors!").toLowerCase(); //.toLowerCase causes all inputted strings and converts them to lower case
 function game (userInput, computerSelection) {
         if (userInput === computerSelection) {
                 prompt("Tied!");
@@ -32,6 +32,8 @@ function game (userInput, computerSelection) {
         }
 }
  game (userInput, computerSelection);
+        
+
 
 
 
