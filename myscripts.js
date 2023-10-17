@@ -18,8 +18,61 @@ let computerSelection;
         } else (computerSelection = "scissors");
 console.log(computerSelection);
 
+
 let userInput = prompt("Rock Paper Scissors!").toLowerCase(); //.toLowerCase causes all inputted strings and converts them to lower case
 function gamePlay (userInput, computerSelection) {
+        switch (userInput) { 
+                case "rock":
+                        switch(computerSelection){
+                                case "rock":
+                                        prompt("Tie!")
+                                        break;
+                                case "paper":
+                                        prompt("You lose! Paper beats rock!")
+                                        computerScore++
+                                        break;
+                                case "scissors":
+                                        prompt("You win! Rock beats scissors!")
+                                        playerScore++
+                                        break;
+                        }
+                        break;
+                case "paper":
+                        switch(computerSelection){
+                                case "rock":
+                                        prompt("You win! Paper beats rock!")
+                                        playerScore++
+                                        break;
+                                case "paper":
+                                        prompt("Tie!")
+                                        break;
+                                case "scissors":
+                                        prompt("You lose! Scissors beats paper!")
+                                        computerScore++
+                                        break;
+                        }
+                        break;
+                case "scissors":
+                        switch(computerSelection){
+                                case "rock":
+                                        prompt("You lose! Rock beats scissors!")
+                                        computerScore++
+                                        break;
+                                case "paper":
+                                        prompt("You win! Scissors beats paper!")
+                                        playerScore++
+                                        break;
+                                case "scissors":
+                                        prompt("Tie!")
+                                        break;
+                }
+                break;
+        }
+        console.log ("Computer score" +" "+ computerScore);
+        console.log ("Player score" +" "+ playerScore);
+}
+
+/*function gamePlay (userInput, computerSelection) {
         if (userInput === computerSelection) { //Could use switch statement to simplify code
                 prompt("Tied!");
         } else if ((userInput == "rock") && (computerSelection == "scissors")) { //To add score in the prompt, add string after computer/playerscore
@@ -38,7 +91,7 @@ function gamePlay (userInput, computerSelection) {
 
         console.log ("Computer score" +" "+ computerScore);
         console.log ("Player score" +" "+ playerScore);
-}
+} */
  gamePlay (userInput, computerSelection);
 }
 
