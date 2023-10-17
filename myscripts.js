@@ -1,3 +1,6 @@
+for (let j=0; j<5; j++) {
+      
+
 function getComputerChoice(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -32,8 +35,8 @@ function game (userInput, computerSelection) {
         }
 }
  game (userInput, computerSelection);
-        
 
+}
 
 
 
